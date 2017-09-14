@@ -97,8 +97,7 @@ def Find_R_Zones(gridFilename,faultDisctionaty,RType):
         i=1
     if RType!='Rrup' and RType!='Rjb':
         print('ERR2:Unkown distance type')
-        return
-    print('i=%d'%i)    
+        return  
         
     fault_proj_vertices=Fault_Proj(faultDisctionaty) # fault_proj_vertices are as (lat,long)
     strike=faultDisctionaty.get('azimuth')
