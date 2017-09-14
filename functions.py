@@ -65,10 +65,10 @@ def Fault_Proj(faultDisctionaty):
 def Find_R_Zones(gridFilename,faultDisctionaty,RType):
     #This function returns an array of lists in vertical as below:
     #[['lat','long']] 'zone'
-    # [[float,float]] int
-    # [[float,float]] int
+    # [float,float, int]
+    # [float,float, int]
     # ...
-    # [[float,float]] int]
+    # [float,float, int]
     # The gridfilename icontains latitude (first column) and longitude (second column) of the gridpoints
     ######## Zones are as below:
     
@@ -112,7 +112,7 @@ def Find_R_Zones(gridFilename,faultDisctionaty,RType):
     for line in f:
         grid_point=(round(float(line.split()[1]),3),round(float(line.split()[0]),3)) # fault_proj_vertices are as (lat,long) must be tuple
         bearing=round(Calculate_Bearing(fault_proj_vertices[i][0],grid_point)) 
-        print(bearing)# Calculate_Bearing takes points as (lat,long) and gives alpha is in degree
+        # Calculate_Bearing takes points as (lat,long) and gives alpha is in degree
         if bearing==strike or bearing==strike+360 or bearing==strike-360:
             #print('grid point is on the strike projection line +')
             if vincenty(fault_proj_vertices[i][0], grid_point).kilometers<=vincenty(fault_proj_vertices[i][0],fault_proj_vertices[i][1]).kilometers:
