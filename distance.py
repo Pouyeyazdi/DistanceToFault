@@ -132,8 +132,4 @@ def Zone_Based_Distance(gridFilename,faultDisctionaty,RType):
             print('  0 grid-point in zone %d'%z)
     grid_matrix= np.hstack([grid_matrix,distance_array])
     return grid_matrix
-    #print(grid_matrix)
-            
-            
-            
             
