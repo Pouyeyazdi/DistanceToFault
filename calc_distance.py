@@ -36,8 +36,7 @@ def Cat_Fault(faultFilename):
             
             
 def main():
-    Cat_Fault(sys.argv[1]) #argv[1] means the item 1 in command line which would be the fault_filename we give
-    # Check if the grid file exists. No dynamic name --> we only have one grid file: grid.txt
+    Cat_Fault(sys.argv[1]) 
     grid_filename='gridLorca.txt' 
     if os.path.exists('inputs/'+grid_filename)==False:
         print('ERR: The grid file does not exist')
