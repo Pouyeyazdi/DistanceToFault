@@ -64,11 +64,10 @@ def Fault_Proj(faultDisctionaty):
 ###############################################################################
 def Find_R_Zones(gridFilename,faultDisctionaty,RType):
     #This function returns an array of lists in vertical as below:
-    #[['lat','long']] 'zone'
-    # [float,float, int]
+    # [[float,float, int]
     # [float,float, int]
     # ...
-    # [float,float, int]
+    # [float,float, int]]
     # The gridfilename icontains latitude (first column) and longitude (second column) of the gridpoints
     ######## Zones are as below:
     
